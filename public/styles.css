@@ -1,50 +1,63 @@
-/*// Variables*/
-$red: #ad0000;
 
-/*// Placeholder selectors*/
-%transition {transition: all .25s;}
-
-/*=Typography=*/
 body {
-  font-family: 'Open sans', sans-serif;
+  font-family: 'Signika', sans-serif;
   font-size: 16px;
   font-weight: 300;
 }
-.navbar a,
-.sec-about p {text-align: center;}
-.navbar a {font-size: 16px;}
-.navbar .fa-external-link {font-size: 10px;}
-.main-heading {
-  font-family: 'Open sans', sans-serif;
-  font-weight: 300;
+
+.navbar a, .sec-about p {
   text-align: center;
-  letter-spacing: 9px;
-  text-transform: uppercase;
 }
+
+.sec-about {
+  background: black;
+}
+
+.navbar a {
+  font-size: 16px;
+}
+
+.navbar .fa-external-link {
+  font-size: 10px;
+}
+
 .container > h1 {
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
 }
+
 p {
   font-size: 16px;
   line-height: 1.5;
 }
-.sec-about a {text-decoration: underline;}
-.sec-services h2,
-.sec-services p {
-  font-weight: 300;
+
+.sec-services h2, .sec-services p {
   text-align: center;
+  padding-left: 40px;
 }
-.sec-testimonials p {font-style: italic;}
-.sec-contact .btn {text-transform: uppercase;}
+
+.sec-testimonials p {
+  font-style: italic;
+}
+
+.sec-contact .btn {
+  text-transform: uppercase;
+}
+
 .soc-media-ul a {
   text-align: center;
   text-decoration: none;
 }
-/*=Base=*/
-section {padding: 5em 0;}
-footer {padding: 3em 0;}
+
+section {
+  padding: 5em 0;
+}
+
+footer {
+  padding: 3em 0;
+}
+
 form {
   @media screen and (max-width: 768px) and (min-width: 485px) {max-width: 70%;}
 }
@@ -53,28 +66,71 @@ ul {
   margin: 0;
   list-style-type: none;
 }
-a {@extend %transition;}
+
+a {
+  @extend %transition;
+}
+
 hr {
   margin-bottom: 3em;
   width: 7%;
 }
-/*=Module=*/
-/*=Layout=*/
-.sec-folio .row {margin-bottom: 3em;}
-.sec-testimonials .row {}
-/*Header*/
-.navbar-default {background: #fff;}
-.navbar .fa-external-link {vertical-align: top;}
+
+.sec-folio {
+  background: black;
+}
+.sec-folio .row {
+  margin-bottom: 3em;
+}
+
+.navbar-default {
+  background: #fff;
+}
+
+.navbar .fa-external-link {
+  vertical-align: top;
+}
 .navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:focus {color: $red;}
-.navbar-default .navbar-nav>li>a:active {color: darken($red, 5%);}
+.navbar-default .navbar-nav>li>a:focus {
+  color: $red;
+}
+.navbar-default .navbar-nav>li>a:active {
+  color: darken($red, 5%);
+}
 /*Main*/
+/*#home {
+  padding-left: 0;
+  padding-right: 0;
+  background-image: url(http://cdn.playbuzz.com/cdn/c2718b91-e81f-46b5-8bb6-bb5f17a0c2e2/6144338a-2124-420c-87f0-161b1960a7de.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center center;
+  text-align: center;
+  height: 722px;
+}
+
+.full {
+  background-color: rgba(67,58,59,0.6);
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 100px;
+  height: 722px;
+}
+
+.text-center {
+  margin-top: 20px;
+}*/
+
 .sec-main {
   position: relative;
   height: 560px;
-  background: url(http://www.2minds.co.il/wp-content/uploads/hero4.jpg) no-repeat center center;
+  background: url(http://cdn.playbuzz.com/cdn/c2718b91-e81f-46b5-8bb6-bb5f17a0c2e2/6144338a-2124-420c-87f0-161b1960a7de.jpg) no-repeat center center;
   background-size: cover;
+  height: 722px;
 }
+
 .main-heading {
   position: absolute;
   top: 0;
@@ -84,48 +140,104 @@ hr {
   z-index: 2;
   padding: 0;
   margin: auto;
-  height: 40px; // 87px
+  height: 40px; 
   color: #fff;
+  font-family: 'Signika', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  font-size: 70px;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
 }
 /*About*/
-.sec-about a {
-  color: #000;
-  &:hover,
-  &:focus {color: $red;}
-}
+
 /*Services*/
-.sec-services {background: #f9f9f9;}
+.sec-services {
+  background: #BCB219;
+}
 .sec-services i {
   display: block;
   margin: auto;
   width: 45px;
 }
-.sec-services .fa-paint-brush {width: 64px;}
-.sec-services .fa-code {width: 68px}
-.sec-services h2 {margin: 1em 0;}
-/*Testimonials*/
-.sec-testimonials {background: #f9f9f9;}
-/*Contact*/
-.sec-contact .form-control:focus {
-  border-color: $red;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075),0 0 8px rgba(173, 0, 0, .6);
+.sec-services .fa-paint-brush {
+  width: 64px;
 }
-.sec-contact .btn {
-  background: #000;
-  color: #fff;
-  @extend %transition;
-  &:hover,
-  &:focus {
-    background: $red;
-    border-color: darken($red, 10%);
-  }
+.sec-services .fa-code {
+  width: 68px
+}
+.sec-services h2 {
+  margin: 1em 0;
+}
+/*Testimonials*/
+.sec-testimonials {
+  background: #BCB219;
+}
+.about_folio {
+  color: #BCB219;
+  border-top: 3px solid #BCB219;
+}
+
+#services hr {
+  border-top: 3px solid #333;
+}
+
+#testimonials hr {
+  border-top: 3px solid #333;
+}
+.tone_textarea, .tone_textarea:focus {
+  border-radius: 0px !important;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.32);
+  -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.32);
+  box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.32);
+  font-size: 15px;
+}
+.project_link {
+   position: absolute; 
+   top: 60px; 
+   left: 190px; 
+   width: 100%; 
+   opacity: 0;
+   opacity: 0;
+   -webkit-transition: opacity 0.5s;
+   -moz-transition: opacity 0.5s;
+   -o-transition: opacity 0.5s;
+}
+
+.thumbnail:hover > .project_link {
+  opacity: 1;
+}
+
+.thumbnail {
+  border: 1px solid #BCB219 !important;
+  background-color: #BCB219;
+  cursor: pointer;
+}
+
+img {
+ -webkit-transition: opacity 1s;
+ -moz-transition: opacity 1s;
+ -o-transition: opacity 1s;
+}
+
+img:hover {
+  background-color: #BCB219;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
 }
 
 img {
   height: 200px;
 }
-/*Footer*/
-footer {background: #000;}
+
+footer {
+  background: #000;
+}
 .soc-media-ul {
   display: flex;
   justify-content: center;
@@ -137,6 +249,4 @@ footer {background: #000;}
   color: #fff;
   border-radius: 50%;
   border: 2px solid;
-  &:hover,
-  &:focus {color: $red;}
 }
