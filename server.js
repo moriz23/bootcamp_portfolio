@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var session = require("express-session")
 var app = express();
-var PORT = 1738;
+var PORT = process.env.PORT || 1738;
 
 app.use(express.static('public'));
 
