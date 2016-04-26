@@ -5,8 +5,33 @@ body {
   font-weight: 300;
 }
 
-.navbar a, .sec-about p {
+.navbar-default {
+  background: #000 !important;
+  border-color: none !important;
+}
+
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #BCB219;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.navbar-default .navbar-brand:focus {
+  color: #fff;
+}
+
+.navbar a {
   text-align: center;
+  color: #fff;
+}
+
+.sec-about p {
+  text-align: justify;
 }
 
 .sec-about {
@@ -32,12 +57,12 @@ p {
   line-height: 1.5;
 }
 
-.sec-services h2, .sec-services p {
+.sec-skills h2, .sec-skills p {
   text-align: center;
   padding-left: 40px;
 }
 
-.sec-testimonials p {
+.sec-contact p {
   font-style: italic;
 }
 
@@ -61,14 +86,11 @@ footer {
 form {
   @media screen and (max-width: 768px) and (min-width: 485px) {max-width: 70%;}
 }
+
 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
-}
-
-a {
-  @extend %transition;
 }
 
 hr {
@@ -83,45 +105,24 @@ hr {
   margin-bottom: 3em;
 }
 
-.navbar-default {
-  background: #fff;
-}
-
 .navbar .fa-external-link {
   vertical-align: top;
 }
+
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+}
+
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
-  color: $red;
+  color: #BCB219;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 .navbar-default .navbar-nav>li>a:active {
-  color: darken($red, 5%);
+  color: #BCB219
 }
-/*Main*/
-/*#home {
-  padding-left: 0;
-  padding-right: 0;
-  background-image: url(http://cdn.playbuzz.com/cdn/c2718b91-e81f-46b5-8bb6-bb5f17a0c2e2/6144338a-2124-420c-87f0-161b1960a7de.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position:center center;
-  text-align: center;
-  height: 722px;
-}
-
-.full {
-  background-color: rgba(67,58,59,0.6);
-  display: table-cell;
-  vertical-align: middle;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 100px;
-  height: 722px;
-}
-
-.text-center {
-  margin-top: 20px;
-}*/
 
 .sec-main {
   position: relative;
@@ -152,28 +153,26 @@ hr {
                0px 8px 13px rgba(0,0,0,0.1),
                0px 18px 23px rgba(0,0,0,0.1);
 }
-/*About*/
 
-/*Services*/
-.sec-services {
+.sec-skills {
   background: #BCB219;
 }
-.sec-services i {
+.sec-skills i {
   display: block;
   margin: auto;
   width: 45px;
 }
-.sec-services .fa-paint-brush {
+.sec-skills .fa-paint-brush {
   width: 64px;
 }
-.sec-services .fa-code {
+.sec-skills .fa-code {
   width: 68px
 }
-.sec-services h2 {
+.sec-skills h2 {
   margin: 1em 0;
 }
-/*Testimonials*/
-.sec-testimonials {
+
+.sec-contact {
   background: #BCB219;
 }
 .about_folio {
@@ -181,11 +180,11 @@ hr {
   border-top: 3px solid #BCB219;
 }
 
-#services hr {
+#skills hr {
   border-top: 3px solid #333;
 }
 
-#testimonials hr {
+#contact hr {
   border-top: 3px solid #333;
 }
 .tone_textarea, .tone_textarea:focus {
@@ -223,7 +222,7 @@ img {
  -o-transition: opacity 1s;
 }
 
-img:hover {
+a img:hover {
   background-color: #BCB219;
   opacity: 0.7;
   -webkit-transition: opacity 0.5s;
@@ -231,17 +230,31 @@ img:hover {
   -o-transition: opacity 0.5s;
 }
 
-img {
+a img {
   height: 200px;
+}
+
+.profile {
+  height: 300px;
+  border: 5px solid #BCB219 !important;
 }
 
 footer {
   background: #000;
 }
+
+footer a:hover {
+  color: #BCB219;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
 .soc-media-ul {
   display: flex;
   justify-content: center;
 }
+
 .soc-media-ul li:not(:first-child) a {margin-left: 1em;}
 .soc-media-ul a {
   padding: 0.35em 0;
